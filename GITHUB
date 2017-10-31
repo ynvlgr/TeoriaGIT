@@ -1,0 +1,21 @@
+GITHUB
+
+Clonar el repositorio creado.
+
+Fork: copiar el proyecto.
+
+Crear llave:  ssh-keygen -t rsa -b 4096 -C "argelia.garcia.g@gmail.com"
+
+cat < ~/.ssh/id_rsa.pub
+
+Enlazar repositorio local - remoto:
+git remote add origin https://github.com/ynvlgr/Platzi-invie-github.git
+
+git fetch origin master: traer cambios sin mezclar.
+git merge origin/master: (si error: git merge origin/master --allow-unrelated-histories)
+mezclar.
+=
+git pull origin master
+
+Pull Request: Una solicitud al administrador del repositorio para que realizar un merge de los cambios que realice.
+

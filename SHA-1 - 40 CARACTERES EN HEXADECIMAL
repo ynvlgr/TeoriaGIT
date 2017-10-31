@@ -1,0 +1,64 @@
+SHA-1 - 40 CARACTERES EN HEXADECIMAL
+
+WORKING DIRECTORY-
+STAGING AREA-
+REPOSITORY-
+
+GIT-SISTEMA DE CONTROL DE VERSIONES
+GITHUB-ALMACENAR NUESTRO PROYECTO
+
+**cd **= Change directory
+**mkdir **= Make directory
+**ls **= list - en ++windows ++deben usar dir
+**clear **= también se puede usar control + L
+**touch **= crea un archivo o modifica su fecha de modificación.
+**rm **= remove -rf(para borrar carpetas)
+**rm -rf
+
+eliminar carpeta oculta .git para quitar el repositorio
+
+Para quitar un archivo del staging area -> git rm --cached "archivo"
+
+git log --oneline
+
+git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"kb
+
+git log --oneline --graph --decorate
+
+
+git reset --soft --- Regresa a ese commit y elimina todos los cambios después de él.
+
+git reset --mixed --- lo quita de stage area
+
+git reset HEAD - quita de staging area
+
+
+git reset --soft [SHA 1]: elimina los cambios hasta el staging area
+git reset --mixed [SHA 1]: elimina los cambios hasta el working area
+git reset --hard [SHA 1]: {
+	regresa hasta el commit del [SHA 1]
+	si había elementos en el staging area, los elimina.
+	si había cambios en el archivo sin estar commiteados, los elimina
+}
+
+
+git config --local core.editor"subl --wait"
+Si no quiero hacer el commit en consola.
+
+----branches
+renombrar: git branch -m "branch old" "branch new"
+
+********************
+No hacer commit y dejar guardado
+git stash: es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+git stash list: nos muestra la lista de stash que tengamos.
+git stash drop stash@{numero}: nos permite borrar un stash.
+git stash apply: aplicamos el último cambio
+
+***********
+cherry pick
+Sacar cambios de rama equivoada
+*creas rama correcta
+*te mueves a rama correcta
+*git cherry-pick COMMIT
+*****************************************
